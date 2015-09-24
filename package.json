@@ -1,0 +1,23 @@
+{
+  "name": "ng-test-helper",
+  "version": "1.0.0",
+  "description": "A few helper methods to reduce boilerplate code in Angular Jasmine tests.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Test using Wallaby\" && exit 1",
+    "build": "browserify index.js > bundle.js"
+  },
+  "author": "Daniel Schmidt",
+  "license": "ISC",
+  "browserify": {
+    "transform": ["babelify"]
+  },
+  "devDependencies": {
+    "angular": "^1.4.6",
+    "angular-mocks": "^1.4.6",
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "wallabify": "0.0.9"
+  }
+}

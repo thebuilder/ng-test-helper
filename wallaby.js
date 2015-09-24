@@ -13,7 +13,8 @@ module.exports = function () {
 		files: [
 			{pattern: 'test/**/*.spec.js', ignore: true},
 			{pattern: 'modules/**/*.js', load: false},
-			{pattern: 'index.js', load: false}
+			{pattern: 'index.js', load: false},
+			{pattern: 'bundle.js', load: false}
 		],
 
 		tests: [

@@ -1,11 +1,15 @@
 {
   "name": "ng-test-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A few helper methods to reduce boilerplate code in Angular Jasmine tests.",
-  "main": "bundle.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Test using Wallaby\" && exit 1",
     "build": "browserify index.js > bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thebuilder/ng-test-helper/"
   },
   "author": "Daniel Schmidt",
   "license": "ISC",

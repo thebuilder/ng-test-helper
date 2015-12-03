@@ -1,5 +1,3 @@
-import createElement from './modules/createElement.js'
-
-export default {
-	createElement
-}
+module.exports = {
+	createElement: require('./modules/createElement.js')
+};

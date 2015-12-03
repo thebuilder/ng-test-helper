@@ -1,14 +1,14 @@
-let elements;
-let $rootScope, $compile, $document;
+var elements, $rootScope, $compile, $document;
 
 /**
  * Compile HTML using $compile.
  *
  * @param elementHtml {string} The HTML string to compile
- * @options {{scope}}
+ * @param scope {Object} Target scope
  * @returns {IAugmentedJQuery}
  */
-export default function createElement(elementHtml, {scope=null}={}) {
+function createElement(elementHtml, scope) {
+	if (!scope) scope = null;
 	inject(($injector) => {
 		$rootScope = $injector.get('$rootScope');
 		$compile = $injector.get('$compile');
@@ -17,7 +17,7 @@ export default function createElement(elementHtml, {scope=null}={}) {
 
 	scope = scope || $rootScope.$new();
 	elements = elements || [];
-	let $element = $compile(angular.element(elementHtml))($rootScope);
+	var $element = $compile(angular.element(elementHtml))($rootScope);
 
 	//Append to body
 	$document.find('body').append($element);
@@ -36,3 +36,5 @@ afterEach(()=> {
 	}
 	elements = null;
 });
+
+module.exports = createElement;

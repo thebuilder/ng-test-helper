@@ -1,11 +1,11 @@
-import 'angular';
-import 'angular-mocks';
+require('angular');
+require('angular-mocks');
 
-import helpers from '../index.js'
+var helpers = require('../index.js');
 
-describe('Validate helper methods', ()=> {
-	it ('should create HTML element', ()=> {
-		let element = helpers.createElement('<div></div>');
+describe('Validate helper methods', function() {
+	it ('should create HTML element', function() {
+		var element = helpers.createElement('<div></div>');
 		expect(element[0].outerHTML).toBe('<div class="ng-scope"></div>');
 		expect(element.scope()).toBeDefined();
 		//Should be added to BODY

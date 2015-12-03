@@ -1,6 +1,6 @@
 {
   "name": "ng-test-helper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A few helper methods to reduce boilerplate code in Angular Jasmine tests.",
   "main": "index.js",
   "scripts": {
